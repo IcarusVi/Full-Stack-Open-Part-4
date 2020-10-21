@@ -6,8 +6,14 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "title": "TestTitle2",
-    "author": "TestAuthor2", 
-    "url": "fakeurl.conm/blog2", 
-    "likes": 100
+    "author": "authortest" 
+}
+
+###
+
+PUT http://localhost:3001/api/blogs/5f8e4b71ef750e0344286fad
+Content-Type: application/json
+
+{
+    "likes": 5000
 }

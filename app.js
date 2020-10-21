@@ -1,7 +1,9 @@
+require('express-async-errors')
 const config = require('./utils/config')
 const logger = require('./utils/logger')
 const middleWare = require('./utils/middleware')
 const blogRouter = require('./controllers/blogController')
+
 const express = require('express')
 const app = express()
 const cors = require('cors')
