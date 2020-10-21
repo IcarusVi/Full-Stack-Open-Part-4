@@ -6,14 +6,23 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "author": "authortest" 
+    "title": "noLikes3",
+    "author": "authortest3", 
+    "url": "fakeurl.conm/blog2"
+}
+
+
+###
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "TestingNewBlog",
+    "password": "realpassword",
+    "name": "Tester"
 }
 
 ###
 
-PUT http://localhost:3001/api/blogs/5f8e4b71ef750e0344286fad
-Content-Type: application/json
-
-{
-    "likes": 5000
-}
+GET http://localhost:3001/api/users
