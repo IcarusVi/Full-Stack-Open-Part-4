@@ -1,12 +1,13 @@
 GET http://localhost:3001/api/blogs
 
-###
+### The POST below tests the posting of a blog after logged in
 
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiqwrtnR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RUb2tlbiIsImlkIjoiNWY5MGM2MjhlMTdmYTM0NTAwNjcyZjI0IiwiaWF0IjoxNjAzMzI2MDI4fQ.xPLGZh--JJHl5YgERHWpqC5dr9ZEw6YVRQQOZ8PODDY
 
 {
-    "title": "noLikes3",
+    "title": "Does the middleware work lol",
     "author": "authortest3", 
     "url": "fakeurl.conm/blog2"
 }
@@ -18,11 +19,29 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-    "username": "TestingNewBlog",
-    "password": "realpassword",
-    "name": "Tester"
+    "username": "TestToken",
+    "password": "TokenPass",
+    "name": "FakeName"
 }
 
 ###
 
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "TestToken",
+    "password": "TokenPass"
+}
+
+
+###
+
 GET http://localhost:3001/api/users
+
+### Test delete of a post
+DELETE http://localhost:3001/api/blogs/5f90c9397817645158a489c2
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RUb2tlbiIsImlkIjoiNWY5MGM2MjhlMTdmYTM0NTAwNjcyZjI0IiwiaWF0IjoxNjAzMzM0NDg2fQ.VS0zUQslPYA1GS6nsbsuquB29KP02FxyJD7MBUUo2Ko
+
+### 5f90c9397817645158a489c2
